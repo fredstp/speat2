@@ -1,0 +1,195 @@
+/* INITIALISATION */
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    background: #FAFAFA;
+}
+
+/* GESTION DU HEADER */
+/* Flèche retour */
+#arrow {
+  position: relative;
+  top: 30px;
+  left: 25px;
+  width: 100px;
+}
+
+/* Menu, ombre */
+.trigger-menu-wrapper {
+    height: 125px;
+    line-height: 150px;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0,0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: var(--white);
+}
+
+
+/* GESTION DES IMAGES */
+/* Positionnement des images au centre */
+#lS, #lR, #lC {
+  display: block;
+  margin: auto;
+}
+
+/* logo SPEAT */
+#lS {
+  position: relative;
+  top: -36px;
+  width: 275px;
+}
+
+/* logo snack */
+#lR {
+  position: relative;
+  top: 150px;
+  width: 350px;
+}
+
+/* logo commande */
+#lC {
+  position: relative;
+  top: 180px;
+  width: 75px;
+}
+
+/* GESTION DES COMMANDES */
+/* Gestion de "MA COMMANDE" */
+#com {
+  color: #1975BA;
+  font-size: 69px;
+  font-family: "HelveticaNeue", sans-serif;
+  font-weight: bold;
+  position: relative;
+  top: 200px;
+  margin-bottom: 20%;
+  text-align: center;
+}
+
+
+/* GESTION DES LIGNES */
+/* Ligne en dessous de "MA COMMANDE" */
+#l1 {
+  height: 25px;
+  width: 100%;
+  position: relative;
+  top: 15px;
+}
+
+/* ligne 2 */
+#l2 {
+  top: 865px;
+}
+h1{
+  font-weight: bold;
+}
+
+/*Ma commande*/
+#macommande{
+  font-size: 45px;
+  margin-top: -5%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+.images{
+    text-align: center;
+}
+#burger{
+    width:24%;
+    margin-right:2%;
+}
+#tacos{
+    width:29%;
+    margin-left:2%;
+}
+
+/*Date dans fond bleu*/
+#date{
+  background-color:#6FD6FF;
+  padding: 32px;
+  color: white;
+  text-align: center;
+  height: auto;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 0.4em;
+  width:90%;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/*TABLEAU HORAIRES*/
+table{
+  width:90%;
+  text-align: center;
+  font-size: 25px;
+  margin: 0 auto; 
+  border-collapse: separate;
+  border-spacing: 12px; /* Apply cell spacing */
+  margin-bottom: 107px;
+}
+/* couleur des cases horaires */
+.select_date{
+  background-color:#6FD6FF ;    
+  color: black;
+}
+.b{
+  background-color:rgb(225, 246, 250) ;
+  color:black;
+
+}
+.g{
+  background-color:rgb(236, 231, 231) ;
+  color: white;
+}
+td {
+  height:4.8em;
+  align-items: center;
+  width:20%; 
+  font-weight: bold;
+  background-color:none; 
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 35px;
+} 
+table th, table td{
+  padding: 6px; /* Apply cell padding */
+}
+
+/* ligne séparatrice */
+#hr2 { 
+    box-shadow: 0 -4px 8px 0 grey;
+    border-top: 5px solid #0275d8;
+    margin-bottom: 10px;
+    width: 90%;
+    margin: 0 auto;
+} 
+
+/* Affichage date footer */
+#date_aff{ 
+  font-size: 45px;
+  text-align: center;
+  font-weight: bold;
+  margin-top:24px;
+  text-align: center;
+}
+
+/* icone bleu validé */
+#icon_validation{
+  width: 7%;
+}
+
+/* footer fixe */
+footer{
+  height:120px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+  background: var(--white);
+}

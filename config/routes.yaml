@@ -1,3 +1,11 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index: # Je choisis le nom de ma route. /!\ Pas de doublon.
+    path: / # Ma route
+    controller: App\Controller\DefaultController::index
+
+produit:
+    path: /page/detail_prod
+    controller: App\Controller\DefaultController::detail_prod
+    
+horaires:
+    path: /page/horaires_cmd
+    controller: App\Controller\DefaultController::horaires_cmd

@@ -1,0 +1,72 @@
+
+      {% block stylesheets %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('css/detail_prod.css') }}">
+        
+      {% endblock %}
+
+{% block body %}
+        <header class="page-header">
+            <nav>
+                <div class="trigger-menu-wrapper">
+                    <a class="back" href="{{ path('index') }}"><img id="arrow" src="{{ asset('img/arrow.png') }}" alt="back png" /></a>
+                    <span id="shdw"><img src="{{ asset('img/logoS.png') }}" id="lS" alt="logo speat" /></span>
+                </div>
+            </nav>
+        </header>
+
+{# Image du burger 3D#}
+<img src="{{ asset('img/Image1.png') }}" class="img3d" alt="image 3D">
+
+{# Barre Fleches #}
+<img src="{{ asset('img/flecheGauche.png') }}" class="flecheGauche" alt="fleche gauche">
+<div id="hr2"></div>
+<img src="{{ asset('img/flecheDroite.png') }}" class="flecheDroite" alt="fleche droite"/>
+
+{# Image du petit burger fond vert #}
+<img src="{{ asset('img/o280.png') }}" class="o280" alt="image 280 original">
+
+{# Titre ingrédients #}
+<p id="ingredients"> {{'Ingrédients'}}</p>
+
+{# Images des ingrédients #}
+<table>
+    <tr>
+      <td><img src="{{ asset('img/Cheddar.png') }}" id="cheddar" alt="cheddar"></td>
+      <td><img src="{{ asset('img/Tomate.png') }}"  id="tomate" alt="tomate"></td>
+      <td ><img src= "{{ asset('img/Steak.png') }}" id="steak" alt="steak"></td>
+      <td ><img src="{{ asset('img/pain.png') }}"   id="pain" alt="pain"></td>
+
+    </tr>
+    <tr>
+        <td><img src="{{ asset('img/Sauce.png') }}" id="sauce" alt="sauce"></td>
+        <td><img src="{{ asset('img/Ketchup.png') }}" id="ketchup" alt="ketchup"></td>
+        <td><img src="{{ asset('img/Oignon.png') }}" id="oignon" alt="oignon"></td>
+        <td><img src="{{ asset('img/Emmental.png') }}" id="Emmental" alt="emmental"></td>
+      </tr>
+</table>  
+
+<div class="footer">
+{# 2ème Barre séparatrice#}
+ <div id="hr3"></div> 
+{# Présentation du produit#}
+ <img src="{{ asset('img/3d.png') }}" alt="icon 3D" id="icon3D" />
+ <p id="presentation">
+    <div id="titre_original"> {{'280 Original'}}</br></div>
+        <div id="description">{{ 'Un pain ciabatta cuit sur pierre, un steak haché 100% pur boeuf*, de l\'emmental et du cheddar fondus'}}
+        </div>
+   
+</p>
+
+{# Fleches doubles fond bleu #}
+
+ <img src="{{ asset('img/doubleFleches.png') }}" alt="double fleches" id="doubleFleches" /> 
+ <p id="background"></p>
+
+</div>
+
+        {% block javascripts %}
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        {% endblock %}
+
+{% endblock %}

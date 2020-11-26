@@ -1,0 +1,203 @@
+/* INITIALISATION */
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  background: #FAFAFA;
+  width: 100%;
+}
+
+/* GESTION DU HEADER */
+#arrow {
+  position: relative;
+  top: 30px;
+  left: 25px;
+  width: 100px;
+}
+
+/* Menu, ombre */
+.trigger-menu-wrapper {
+  height: 125px;
+  line-height: 150px;
+  box-shadow: 1px 1px 10px 5px rgba(0, 0,0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: var(--white);
+}
+
+
+/* GESTION DES IMAGES */
+/* Positionnement des images au centre */
+#lS,.img3d,.o280{
+display: block;
+margin: auto;
+}
+
+/* logo SPEAT */
+#lS {
+position: relative;
+top: -36px;
+width: 275px;    
+margin: auto;
+}
+/*Image 3D*/
+.img3d{
+  max-width:100%;
+  height:auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  margin-top:141px;
+  width:960px;
+  margin-bottom:150px;
+} 
+/*ligne separatrice*/
+#hr2{
+  box-shadow: 0 -4px 8px 0 grey;
+  border-top: 5px solid #0275d8;
+  width:80%;
+  margin: 0 auto;
+  position: relative;
+  top:765px;
+} 
+#h2,.flecheDroite,.flecheGauche{
+  display: inline;
+}
+.flecheGauche{
+  position: relative;
+  top: 840px;
+  left: 93px;
+  z-index: 1;
+  width: 128px;
+}
+.flecheDroite{
+  position: absolute;
+  top: 844px;
+  right: 98px;
+  width: 117px;
+} 
+
+/* Image du burger plus petite 280 Original */
+.o280{
+  max-width:100%;
+  height:auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  margin-top:934px;
+  background-color: rgb(134, 255, 130);
+  width:340px;
+  border-radius: 40px;
+  border:2px solid #0275d8;
+} 
+/* Titre ingredients */
+#ingredients{
+  margin-top: -103px;
+  color: #0275d8;
+  font-size: 58px;
+  font-weight: bold;
+  position: relative;
+  top: 1226px;
+  margin-bottom: 82px;
+  margin-left: 5px;
+}
+
+/* Images des ingrÃ©dients */
+table{
+  position: relative;
+  top: 1150px;
+  margin:0 auto;
+  height: auto;
+  margin-bottom: 450px;
+}
+td {
+  height:auto;
+  align-items: center;
+  width:auto; 
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+} 
+#cheddar,#tomate,#steak,#pain,#sauce,#ketchup,#oignon,#Emmental{
+  width: 180px;
+  background-color: rgb(136, 224, 246);
+  background-size: 140px 70px;
+  margin: 12px; 
+  border-radius: 40px;
+  border:2px solid #0275d8;
+}
+/* ligne sÃ©paratrice */
+#hr3 { 
+  box-shadow: 0 -4px 8px 0 grey;
+  border-top: 5px solid #0275d8;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  top:0px;
+} 
+/*Icone 3D*/
+#icon3D{
+  width: 134px;
+  position: relative;
+  top: 8px;
+}
+/* Texte prÃ©sentation du produit */ 
+/* Description du produit */
+/* #presentation{
+  color: black;
+  position:relative;
+  top 
+  left: 141px; 
+} */
+/* Titre 280 Original */
+#titre_original{
+  font-weight: bold;
+  font-size: 49px;
+  top: -153px;
+  position: relative;
+  left: 142px;
+}
+/* texte description */
+#description{
+  font-size: 36px;
+color: grey;
+  top: -166px;
+  position: relative;
+  left: 140px;
+  line-height: 47px;
+  margin-right: 136px;
+}
+
+/* bas de page fleche double fond bleu*/
+#doubleFleches{
+  width:134px;
+  position: relative;
+  background-color: #0275d8;
+  display: block;
+  margin-left: auto;
+
+  margin-right: auto;
+  max-width: 100%; 
+  top:-174px;
+  z-index: 1;
+  left: 0; bottom: 0; right: 0;
+}
+#background{
+  width: 100%;
+  background-color: #0275d8;
+  height: 150px;
+  position: relative;
+  top:-313px;
+}
+.footer{
+  height:300px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+  background: var(--white);
+}
+
