@@ -1,5 +1,5 @@
 index: # Je choisis le nom de ma route. /!\ Pas de doublon.
-    path: / # Ma route
+    path: /index # Ma route
     controller: App\Controller\DefaultController::index
 
 produit:
