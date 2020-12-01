@@ -2,10 +2,11 @@
 
 namespace App\Entity;
 
+use App\Entity\Restaurant;
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\Collection;
 use App\Repository\JoursOuvertureRepository;
 use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
-use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=JoursOuvertureRepository::class)
@@ -39,7 +40,7 @@ class JoursOuverture
         $this->restaurants = new ArrayCollection();
         $this->horaires = new ArrayCollection();
     }
-
+    
     public function getId(): ?int
     {
         return $this->id;

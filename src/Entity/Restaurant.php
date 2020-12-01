@@ -2,10 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\RestaurantRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use App\Entity\Restaurant;
+use App\Entity\JoursOuverture;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\RestaurantRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass=RestaurantRepository::class)
@@ -22,17 +24,17 @@ class Restaurant
     /**
      * @ORM\Column(type="string", length=20)
      */
-    private $code_etablissement;
+    private $codeEtablissement;
 
     /**
      * @ORM\Column(type="string", length=100)
      */
-    private $nom_du_restaurant;
+    private $nomDuRestaurant;
 
     /**
      * @ORM\Column(type="string", length=100)
      */
-    private $denomination_commerciale;
+    private $denominationCommerciale;
 
     /**
      * @ORM\Column(type="string", length=20, nullable=true)
@@ -42,12 +44,12 @@ class Restaurant
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $restaurant_adress;
+    private $restaurantAdress;
 
     /**
      * @ORM\Column(type="string", length=20)
      */
-    private $code_postal;
+    private $codePostal;
 
     /**
      * @ORM\Column(type="string", length=100)
@@ -77,42 +79,42 @@ class Restaurant
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $site_web;
+    private $siteWeb;
 
     /**
      * @ORM\Column(type="string", length=100)
      */
-    private $restaurant_type;
+    private $restaurantType;
 
     /**
      * @ORM\Column(type="string", length=100)
      */
-    private $service_proposes;
+    private $serviceProposes;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $categories_restaurant;
+    private $categoriesRestaurant;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $nbr_categories_produit_restaurant;
+    private $nbrCategoriesProduitRestaurant;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $url_logo_restaurant;
+    private $urlLogoRestaurant;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $url_logo_menu;
+    private $urlLogoMenu;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $url_logo_compo_produit;
+    private $urlLogoCompoProduit;
 
     /**
      * @ORM\ManyToMany(targetEntity=JoursOuverture::class, inversedBy="restaurants")
@@ -137,36 +139,36 @@ class Restaurant
 
     public function getCodeEtablissement(): ?string
     {
-        return $this->code_etablissement;
+        return $this->codeEtablissement;
     }
 
-    public function setCodeEtablissement(string $code_etablissement): self
+    public function setCodeEtablissement(string $codeEtablissement): self
     {
-        $this->code_etablissement = $code_etablissement;
+        $this->codeEtablissement = $codeEtablissement;
 
         return $this;
     }
 
     public function getNomDuRestaurant(): ?string
     {
-        return $this->nom_du_restaurant;
+        return $this->nomDuRestaurant;
     }
 
-    public function setNomDuRestaurant(string $nom_du_restaurant): self
+    public function setNomDuRestaurant(string $nomDuRestaurant): self
     {
-        $this->nom_du_restaurant = $nom_du_restaurant;
+        $this->nomDuRestaurant = $nomDuRestaurant;
 
         return $this;
     }
 
     public function getDenominationCommerciale(): ?string
     {
-        return $this->denomination_commerciale;
+        return $this->denominationCommerciale;
     }
 
-    public function setDenominationCommerciale(string $denomination_commerciale): self
+    public function setDenominationCommerciale(string $denominationCommerciale): self
     {
-        $this->denomination_commerciale = $denomination_commerciale;
+        $this->denominationCommerciale = $denominationCommerciale;
 
         return $this;
     }
@@ -185,24 +187,24 @@ class Restaurant
 
     public function getRestaurantAdress(): ?string
     {
-        return $this->restaurant_adress;
+        return $this->restaurantAdress;
     }
 
-    public function setRestaurantAdress(string $restaurant_adress): self
+    public function setRestaurantAdress(string $restaurantAdress): self
     {
-        $this->restaurant_adress = $restaurant_adress;
+        $this->restaurantAdress = $restaurantAdress;
 
         return $this;
     }
 
     public function getCodePostal(): ?string
     {
-        return $this->code_postal;
+        return $this->codePostal;
     }
 
-    public function setCodePostal(string $code_postal): self
+    public function setCodePostal(string $codePostal): self
     {
-        $this->code_postal = $code_postal;
+        $this->codePostal = $codePostal;
 
         return $this;
     }
@@ -269,96 +271,96 @@ class Restaurant
 
     public function getSiteWeb(): ?string
     {
-        return $this->site_web;
+        return $this->siteWeb;
     }
 
-    public function setSiteWeb(?string $site_web): self
+    public function setSiteWeb(?string $siteWeb): self
     {
-        $this->site_web = $site_web;
+        $this->siteWeb = $siteWeb;
 
         return $this;
     }
 
     public function getRestaurantType(): ?string
     {
-        return $this->restaurant_type;
+        return $this->restaurantType;
     }
 
-    public function setRestaurantType(string $restaurant_type): self
+    public function setRestaurantType(string $restaurantType): self
     {
-        $this->restaurant_type = $restaurant_type;
+        $this->restaurantType = $restaurantType;
 
         return $this;
     }
 
     public function getServiceProposes(): ?string
     {
-        return $this->service_proposes;
+        return $this->serviceProposes;
     }
 
-    public function setServiceProposes(string $service_proposes): self
+    public function setServiceProposes(string $serviceProposes): self
     {
-        $this->service_proposes = $service_proposes;
+        $this->serviceProposes = $serviceProposes;
 
         return $this;
     }
 
     public function getCategoriesRestaurant(): ?string
     {
-        return $this->categories_restaurant;
+        return $this->categoriesRestaurant;
     }
 
-    public function setCategoriesRestaurant(string $categories_restaurant): self
+    public function setCategoriesRestaurant(string $categoriesRestaurant): self
     {
-        $this->categories_restaurant = $categories_restaurant;
+        $this->categoriesRestaurant = $categoriesRestaurant;
 
         return $this;
     }
 
     public function getNbrCategoriesProduitRestaurant(): ?int
     {
-        return $this->nbr_categories_produit_restaurant;
+        return $this->nbrCategoriesProduitRestaurant;
     }
 
-    public function setNbrCategoriesProduitRestaurant(int $nbr_categories_produit_restaurant): self
+    public function setNbrCategoriesProduitRestaurant(int $nbrCategoriesProduitRestaurant): self
     {
-        $this->nbr_categories_produit_restaurant = $nbr_categories_produit_restaurant;
+        $this->nbrCategoriesProduitRestaurant = $nbrCategoriesProduitRestaurant;
 
         return $this;
     }
 
     public function getUrlLogoRestaurant(): ?string
     {
-        return $this->url_logo_restaurant;
+        return $this->urlLogoRestaurant;
     }
 
-    public function setUrlLogoRestaurant(string $url_logo_restaurant): self
+    public function setUrlLogoRestaurant(string $urlLogoRestaurant): self
     {
-        $this->url_logo_restaurant = $url_logo_restaurant;
+        $this->urlLogoRestaurant = $urlLogoRestaurant;
 
         return $this;
     }
 
     public function getUrlLogoMenu(): ?string
     {
-        return $this->url_logo_menu;
+        return $this->urlLogoMenu;
     }
 
-    public function setUrlLogoMenu(string $url_logo_menu): self
+    public function setUrlLogoMenu(string $urlLogoMenu): self
     {
-        $this->url_logo_menu = $url_logo_menu;
+        $this->urlLogoMenu = $urlLogoMenu;
 
         return $this;
     }
 
     public function getUrlLogoCompoProduit(): ?string
     {
-        return $this->url_logo_compo_produit;
+        return $this->urlLogoCompoProduit;
     }
 
-    public function setUrlLogoCompoProduit(?string $url_logo_compo_produit): self
+    public function setUrlLogoCompoProduit(?string $urlLogoCompoProduit): self
     {
-        $this->url_logo_compo_produit = $url_logo_compo_produit;
+        $this->urlLogoCompoProduit = $urlLogoCompoProduit;
 
         return $this;
     }

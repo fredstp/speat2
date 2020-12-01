@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+{% set title = "Liste des restaurants !!!" %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+<div class="container">
+    
+    <header class="page-header">
+        <h2 class="page-title">{{ title }}</h2>
+    </header>
+
+    <main>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Code etab</th>
+                    <th scope="col">Nom du restaurant</th>
+                    <th scope="col">Denomination commerciale</th>
+                    <th scope="col">Siret</th>
+                    <th scope="col">Adresse</th>
+                    <th scope="col">Code postal</th>
+                    <th scope="col">Ville</th>
+                    <th scope="col">Departement</th>
+                    <th scope="col">GPS</th>
+                    <th scope="col">Telephone</th>
+                    <th scope="col">email</th>
+                    <th scope="col">Site Web</th>
+                    <th scope="col">Type de Restaurant</th>
+                    <th scope="col">Service proposes</th>
+                    <th scope="col">nbr de categorie de produit</th>
+                    <th scope="col">url logo</th>
+                    <th scope="col">url menu</th>
+                    <th scope="col">url compo produit</th>
+                    <th scope="col">Horaires</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                {% for restaurant in restaurants %}
+                   {# {{ dump(restaurant) }} #}
+                    <td>{{ restaurant.codeEtablissement }} </td>
+                    <td>{{ restaurant.nomDuRestaurant}} </td>
+                    <td>{{ restaurant.denominationCommerciale }} </td>
+                    <td>{{ restaurant.siret }} </td>
+                    <td>{{ restaurant.restaurantAdress }} </td>
+                    <td>{{ restaurant.codePostal }} </td>
+                    <td>{{ restaurant.ville }} </td>
+                    <td>{{ restaurant.departement }} </td>
+                    <td>{{ restaurant.GPS }} </td>
+                    <td>{{ restaurant.telephone }} </td>
+                    <td>{{ restaurant.email }} </td>
+                    <td>{{ restaurant.siteWeb }} </td>
+                    <td>{{ restaurant.restaurantType }} </td>
+                    <td>{{ restaurant.serviceProposes }} </td>
+                    <td>{{ restaurant.categoriesRestaurant }} </td>
+                    <td>{{ restaurant.nbrCategoriesProduitRestaurant }} </td>
+                    <td>{{ restaurant.urlLogoRestaurant }} </td>
+                    <td>{{ restaurant.urlLogoMenu }} </td>
+                    <td>{{ restaurant.urlLogoCompoProduit }} </td>
+                    {% for joursOuverture in restaurant.joursOuvertures %}
+                    <td>{{ restaurant.JoursOuverture }} </td>                  
+                </tr>
+                {% endfor %}
+                {% endfor %}
+            </tbody>
+            <tfoot> 
+         
+            
+                
+            </tfoot>
+        </table>  
+       
+    </main>
+
+</div>
+{% endblock %}

@@ -20,12 +20,12 @@ class Horaires
     /**
      * @ORM\Column(type="time", nullable=true)
      */
-    private $start_time;
+    private $startTime;
 
     /**
      * @ORM\Column(type="time", nullable=true)
      */
-    private $end_time;
+    private $endTime;
 
     /**
      * @ORM\ManyToOne(targetEntity=Restaurant::class, inversedBy="horaires")
@@ -44,24 +44,24 @@ class Horaires
 
     public function getStartTime(): ?\DateTimeInterface
     {
-        return $this->start_time;
+        return $this->startTime;
     }
 
-    public function setStartTime(?\DateTimeInterface $start_time): self
+    public function setStartTime(?\DateTimeInterface $startTime): self
     {
-        $this->start_time = $start_time;
+        $this->startTime = $startTime;
 
         return $this;
     }
 
     public function getEndTime(): ?\DateTimeInterface
     {
-        return $this->end_time;
+        return $this->endTime;
     }
 
-    public function setEndTime(?\DateTimeInterface $end_time): self
+    public function setEndTime(?\DateTimeInterface $endTime): self
     {
-        $this->end_time = $end_time;
+        $this->endTime = $endTime;
 
         return $this;
     }
